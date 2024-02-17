@@ -1,7 +1,10 @@
 import streamlit as st
 import pickle
 
-model=pickle.load(open("model.pkl",'rb'))
+#model=pickle.load(open("model.pkl",'rb'))
+
+with open("model.pkl", "rb") as model_file:
+    model = pickle.load(model_file)
 
 st.markdown("streamlit is cool")
 st.title("fail/pass classifier streamlit app")
