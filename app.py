@@ -1,10 +1,10 @@
 import streamlit as st
 import pickle
+import joblib
 
 #model=pickle.load(open("model.pkl",'rb'))
-
-with open("model.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
+model_path = "model.pkl"  
+model = joblib.load(model_path)
 
 st.markdown("streamlit is cool")
 st.title("fail/pass classifier streamlit app")
